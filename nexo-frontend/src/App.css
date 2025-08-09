@@ -1,0 +1,182 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* Nexo Color Palette */
+:root {
+  --radius: 0.625rem;
+  
+  /* Nexo Colors */
+  --nexo-black: #0B0B0B;
+  --nexo-charcoal: #1A1A1A;
+  --nexo-gray: #D9D9D9;
+  --nexo-white: #FFFFFF;
+  --nexo-blue: #1E90FF;
+  
+  /* Light theme with Nexo colors */
+  --background: var(--nexo-white);
+  --foreground: var(--nexo-black);
+  --card: var(--nexo-white);
+  --card-foreground: var(--nexo-black);
+  --popover: var(--nexo-white);
+  --popover-foreground: var(--nexo-black);
+  --primary: var(--nexo-blue);
+  --primary-foreground: var(--nexo-white);
+  --secondary: var(--nexo-gray);
+  --secondary-foreground: var(--nexo-black);
+  --muted: var(--nexo-gray);
+  --muted-foreground: var(--nexo-charcoal);
+  --accent: var(--nexo-blue);
+  --accent-foreground: var(--nexo-white);
+  --destructive: #ef4444;
+  --border: var(--nexo-gray);
+  --input: var(--nexo-gray);
+  --ring: var(--nexo-blue);
+  --chart-1: var(--nexo-blue);
+  --chart-2: #10b981;
+  --chart-3: #f59e0b;
+  --chart-4: #ef4444;
+  --chart-5: #8b5cf6;
+  --sidebar: var(--nexo-white);
+  --sidebar-foreground: var(--nexo-black);
+  --sidebar-primary: var(--nexo-blue);
+  --sidebar-primary-foreground: var(--nexo-white);
+  --sidebar-accent: var(--nexo-gray);
+  --sidebar-accent-foreground: var(--nexo-black);
+  --sidebar-border: var(--nexo-gray);
+  --sidebar-ring: var(--nexo-blue);
+}
+
+/* Dark theme with Nexo colors */
+.dark {
+  --background: var(--nexo-black);
+  --foreground: var(--nexo-white);
+  --card: var(--nexo-charcoal);
+  --card-foreground: var(--nexo-white);
+  --popover: var(--nexo-charcoal);
+  --popover-foreground: var(--nexo-white);
+  --primary: var(--nexo-blue);
+  --primary-foreground: var(--nexo-white);
+  --secondary: var(--nexo-charcoal);
+  --secondary-foreground: var(--nexo-white);
+  --muted: var(--nexo-charcoal);
+  --muted-foreground: var(--nexo-gray);
+  --accent: var(--nexo-blue);
+  --accent-foreground: var(--nexo-white);
+  --destructive: #ef4444;
+  --border: rgba(217, 217, 217, 0.2);
+  --input: rgba(217, 217, 217, 0.1);
+  --ring: var(--nexo-blue);
+  --chart-1: var(--nexo-blue);
+  --chart-2: #10b981;
+  --chart-3: #f59e0b;
+  --chart-4: #ef4444;
+  --chart-5: #8b5cf6;
+  --sidebar: var(--nexo-charcoal);
+  --sidebar-foreground: var(--nexo-white);
+  --sidebar-primary: var(--nexo-blue);
+  --sidebar-primary-foreground: var(--nexo-white);
+  --sidebar-accent: var(--nexo-charcoal);
+  --sidebar-accent-foreground: var(--nexo-white);
+  --sidebar-border: rgba(217, 217, 217, 0.2);
+  --sidebar-ring: var(--nexo-blue);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+  }
+  
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Custom Nexo styles */
+.nexo-gradient {
+  background: linear-gradient(135deg, var(--nexo-blue) 0%, var(--nexo-charcoal) 100%);
+}
+
+.nexo-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.nexo-card:hover {
+  box-shadow: 0 4px 16px rgba(30, 144, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.nexo-button {
+  background: var(--nexo-blue);
+  color: var(--nexo-white);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.75rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.nexo-button:hover {
+  background: #1c7ed6;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.3);
+}
