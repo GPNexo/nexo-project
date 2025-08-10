@@ -78,8 +78,8 @@ const LoginPage = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-center mb-8"
         >
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-2xl mb-4">
-            <img src="/logo-icon.png" alt="NEXØ" className="w-10 h-10 object-contain" />
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4 overflow-hidden">
+            <img src="/logo-icon.png" alt="NEXØ" className="w-full h-full object-cover" />
           </div>
           <h1 className="font-montserrat font-bold text-3xl text-foreground mb-2">NEXØ</h1>
           <p className="text-muted-foreground font-inter">Gestão Inteligente de Projetos</p>
