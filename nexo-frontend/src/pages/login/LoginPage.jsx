@@ -79,7 +79,7 @@ const LoginPage = () => {
           className="text-center mb-8"
         >
           <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-2xl mb-4">
-            <span className="text-primary-foreground font-montserrat font-bold text-2xl">N</span>
+            <span className="text-primary-foreground font-montserrat font-bold text-2xl">Ø</span>
           </div>
           <h1 className="font-montserrat font-bold text-3xl text-foreground mb-2">NEXØ</h1>
           <p className="text-muted-foreground font-inter">Gestão Inteligente de Projetos</p>
